@@ -1,0 +1,13 @@
+{
+  "name": "OnsenUI-Meteor-ToDo",
+  "private": true,
+  "scripts": {
+    "start": "meteor run"
+  },
+  "dependencies": {
+    "meteor-node-stubs": "~0.2.0",
+    "react": "^15.3.0",
+    "react-addons-pure-render-mixin": "^15.3.0",
+    "react-dom": "^15.3.0"
+  }
+}
