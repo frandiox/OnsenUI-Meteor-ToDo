@@ -20,7 +20,7 @@ const TaskList = ({tasks, incompleteCount, navigator}) => {
 
   const renderTask = (task, index) => {
     return (
-      <Task key={task._id} onClick={taskClickHandler.bind(this, index)} task={task} />
+      <Task key={task._id} onClick={() => taskClickHandler(index)} task={task} />
     );
   };
 

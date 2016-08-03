@@ -26,7 +26,6 @@ const MainPage = ({navigator}) => {
         createdAt: new Date()
       });
 
-      navigator.popPage();
     } else {
       ons.notification.alert('You must provide a task title!')
     }
@@ -55,7 +54,6 @@ const MainPage = ({navigator}) => {
       >
         <Icon
           icon='md-edit'
-          style={{marginRight: '5px'}}
         />
       </Fab>
     )
