@@ -1,46 +1,42 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
+import { ListItem, Input, Icon } from 'react-onsenui';
 
 import { Tasks } from '../api/tasks.js';
 
-// Task component - represents a single todo item
-export default class Task extends Component {
-  toggleChecked() {
-    // Set the checked property to the opposite of its current value
-    Tasks.update(this.props.task._id, {
-      $set: { checked: !this.props.task.checked }
+const Task = ({task, onClick}) => {
+  const toggleChecked = () => {
+    Tasks.update(task._id, {
+      $set: { checked: !task.checked }
     });
-  }
+  };
 
-  deleteThisTask() {
-    Tasks.remove(this.props.task._id);
-  }
+  const deleteThisTask = () => {
+    Tasks.remove(task._id);
+  };
 
-  render() {
-    // Give tasks a different className when they are checked off,
-    // so that we can style them nicely in CSS
-    const taskClassName = this.props.task.checked ? 'checked' : '';
-
-    return (
-      <li className={taskClassName}>
-        <button className="delete" onClick={this.deleteThisTask.bind(this)}>
-          &times;
-        </button>
-
-        <input
+  return (
+    <ListItem modifier="longdivider" tappable>
+      <label className="left">
+        <Input
           type="checkbox"
-          readOnly
-          checked={this.props.task.checked}
-          onClick={this.toggleChecked.bind(this)}
+          checked={task.checked}
+          onClick={toggleChecked}
         />
-
-        <span className="text">{this.props.task.text}</span>
-      </li>
-    );
-  }
-}
+      </label>
+      <div className="center" onClick={onClick}>{task.text}</div>
+      <label className="right">
+        <Icon
+          icon={{default: 'ion-ios-trash-outline', material: 'md-delete'}}
+          onClick={deleteThisTask}
+        />
+      </label>
+    </ListItem>
+  );
+};
 
 Task.propTypes = {
-  // This component gets the task to display through a React prop.
-  // We can use propTypes to indicate it is required
-  task: PropTypes.object.isRequired
+  task: PropTypes.object.isRequired,
+  onClick: PropTypes.func
 };
+
+export default Task;
