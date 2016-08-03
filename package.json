@@ -4,6 +4,9 @@
   "scripts": {
     "start": "meteor run"
   },
+  "engines": {
+    "node": "4.4.7"
+  },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
     "onsenui": "^2.0.0-rc.15",
