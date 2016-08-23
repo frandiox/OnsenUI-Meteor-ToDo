@@ -7,7 +7,10 @@ const TaskDetailsPage = ({task, navigator}) => {
     return (
       <Toolbar>
         <div className='left'>
-          <BackButton onClick={() => navigator.popPage()}>Todos</BackButton>
+          <BackButton onClick={() => navigator.popPage()}>
+            <span className="back-button__label">Todos</span>
+
+          </BackButton>
         </div>
         <div className="center">Task Details</div>
       </Toolbar>
@@ -15,7 +18,7 @@ const TaskDetailsPage = ({task, navigator}) => {
   };
 
   return (
-    <Page 
+    <Page
       renderToolbar={renderToolbar}
     >
       <div style={{margin: '20px auto', display: 'table'}}>
