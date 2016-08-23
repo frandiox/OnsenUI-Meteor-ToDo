@@ -8,6 +8,7 @@ const TaskDetailsPage = ({task, navigator}) => {
       <Toolbar>
         <div className='left'>
           <BackButton onClick={() => navigator.popPage()}>
+            <span className="back-button__icon"></span>
             <span className="back-button__label">Todos</span>
 
           </BackButton>
