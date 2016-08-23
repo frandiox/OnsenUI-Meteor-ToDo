@@ -9,10 +9,10 @@
   },
   "dependencies": {
     "meteor-node-stubs": "~0.2.0",
-    "onsenui": "^2.0.0-rc.15",
+    "onsenui": "^2.0.0-rc.17",
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-onsenui": "^0.7.3"
+    "react-onsenui": "^0.7.5"
   }
 }
