@@ -10,10 +10,10 @@
   "dependencies": {
     "babel-runtime": "^6.23.0",
     "meteor-node-stubs": "~0.2.0",
-    "onsenui": "^2.0.0-rc.17",
+    "onsenui": "^2.1.0",
     "react": "^15.3.0",
     "react-addons-pure-render-mixin": "^15.3.0",
     "react-dom": "^15.3.0",
-    "react-onsenui": "^0.7.5"
+    "react-onsenui": "^1.1.0"
   }
 }
